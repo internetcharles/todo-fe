@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { signUp } from './todo-api';
+import { signUp, signIn } from './todo-api';
 
 export default class AuthPage extends Component {
 
@@ -17,6 +17,23 @@ export default class AuthPage extends Component {
             email: this.state.signUpEmail,
             password: this.state.signUpPassword
         });
+
+        this.props.handleToken(user.body.token);
+        this.props.history.push('/');
+
+        console.log(user.body.token)
+    }
+
+    handleSignIn = async (e) => {
+        e.preventDefault();
+
+        const user = await signIn({
+            email: this.state.signInEmail,
+            password: this.state.signInPassword
+        });
+
+        this.props.handleToken(user.body.token);
+        this.props.history.push('/');
 
         console.log(user.body)
     }
