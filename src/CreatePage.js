@@ -20,6 +20,7 @@ export default class CreatePage extends Component {
                 todo: this.state.todo,
                 completed: this.state.completed,
             });
+            this.props.history.push('/list');
         }
         catch (e) {
             console.log(e.message);

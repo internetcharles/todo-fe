@@ -42,3 +42,29 @@ export function createTodo(userData) {
         return { error: e.message };
     }
 }
+
+export function updateTodo(id, userData) {
+    const token = localStorage.getItem('token');
+
+    try {
+        return request
+            .put(`${URL}/api/todos/${id}`, userData)
+            .set('Authorization', token);
+    }
+    catch (e) {
+        return { error: e.message };
+    }
+}
+
+export function deleteTodo(id) {
+    const token = localStorage.getItem('token');
+
+    try {
+        return request
+            .delete(`${URL}/api/todos/${id}`)
+            .set('Authorization', token);
+    }
+    catch (e) {
+        return { error: e.message };
+    }
+}
