@@ -45,7 +45,7 @@ export default class AuthPage extends Component {
                 <form>
                     <label>
                         <input placeholder="E-mail" onChange={e => this.setState({ signInEmail: e.target.value })} value={this.state.signInEmail} />
-                        <input placeholder="Password" onChange={e => this.setState({ signInPassword: e.target.value })} value={this.state.signInPassword} />
+                        <input placeholder="Password" type="password" onChange={e => this.setState({ signInPassword: e.target.value })} value={this.state.signInPassword} />
                         <br />
                         <button>SUBMIT</button>
                     </label>
@@ -54,7 +54,7 @@ export default class AuthPage extends Component {
                 <form onSubmit={this.handleSignUp}>
                     <label>
                         <input placeholder="E-mail" onChange={e => this.setState({ signUpEmail: e.target.value })} value={this.state.signUpEmail} />
-                        <input placeholder="Password" onChange={e => this.setState({ signUpPassword: e.target.value })} value={this.state.signUpPassword} />
+                        <input placeholder="Password" type="password" onChange={e => this.setState({ signUpPassword: e.target.value })} value={this.state.signUpPassword} />
                         <br />
                         <button>SUBMIT</button>
                     </label>
