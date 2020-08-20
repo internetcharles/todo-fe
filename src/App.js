@@ -51,6 +51,13 @@ export default class App extends Component {
                             handleToken={this.handleToken}
                              {...routerProps} />} 
                         />
+                                                <Route 
+                            path="/list?" 
+                            exact
+                            render={(routerProps) => <ListPage token={this.state.token}
+                            handleToken={this.handleToken}
+                             {...routerProps} />} 
+                        />
                         <Route 
                             path="/login" 
                             exact
