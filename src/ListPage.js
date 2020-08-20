@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { fetchTodos, updateTodo, deleteTodo, createTodo } from './todo-api';
 
 
-export default class HomePage extends Component {
+export default class ListPage extends Component {
 
     state = {
         todos: [],
@@ -51,7 +51,8 @@ export default class HomePage extends Component {
         })
     }
 
-    handleSubmit = async () => {
+    handleSubmit = async (e) => {
+        e.preventDefault();
         console.log('todo');
         try{
             await createTodo({
