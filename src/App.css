@@ -87,6 +87,21 @@ button {
 
 }
 
+.home-page {
+  color: white;
+  border-radius: 25px;
+  background: rgba(47, 47, 47, 0.849);
+  padding: 20px;
+  width: 200px;
+  position: relative;
+  margin: 15px auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: white;
+}
+
 .login button {
   margin-top: 1em;
 }

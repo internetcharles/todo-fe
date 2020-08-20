@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
 import AuthPage from './AuthPage';
-import HomePage from './HomePage';
+import ListPage from './ListPage';
 import Header from './Header';
+import HomePage from './HomePage';
 
 export default class App extends Component {
   state = {
@@ -36,10 +37,17 @@ export default class App extends Component {
                     this.state.token ? <button onClick={this.clearToken}>Logout</button> : null
                   }
                     <Switch>
-                        <Route 
+                    < Route 
                             path="/" 
                             exact
                             render={(routerProps) => <HomePage token={this.state.token}
+                            handleToken={this.handleToken}
+                             {...routerProps} />} 
+                        />
+                        <Route 
+                            path="/list" 
+                            exact
+                            render={(routerProps) => <ListPage token={this.state.token}
                             handleToken={this.handleToken}
                              {...routerProps} />} 
                         />
