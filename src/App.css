@@ -74,3 +74,25 @@ button {
   position: relative;
   margin: 15px auto;
 }
+
+.login {
+  color: white;
+  border-radius: 25px;
+  background: rgba(47, 47, 47, 0.849);
+  padding: 20px;
+  width: 200px;
+  position: relative;
+  margin: 15px auto;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.login button {
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .big-header {
+    font-size: 10px;
+  }
+}

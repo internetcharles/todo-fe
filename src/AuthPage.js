@@ -40,7 +40,7 @@ export default class AuthPage extends Component {
 
     render() {
         return (
-            <div>
+            <div className="login">
                 <p>SIGN IN</p>
                 <form>
                     <label>
